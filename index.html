@@ -8,10 +8,41 @@
   <body>
     <h1>Hello World!</h1>
     <hr/>
+    <h3>Display Current Date & Time</h3>
     <div id="display-element"></div>
-    <button onclick="displayDate()">Click Me</button>
-    <input type="number" name="" id="num2str">
+    <button onclick="displayDate()">Current Date & Time</button>
     <hr/>
+    <h3>Convert a String to a Number</h3>
+    <div id="str-to-num"></div>
+    <input type="text" id="stringInput" value="" placeholder="Input Number"></input>
+    <button onclick="str2num()">Convert String to Number</button>
+    <hr/>
+    <h3>Convert a Number to a String</h3>
+    <div id="num-to-str"></div>
+    <input type="number" id="numInput" value="" placeholder="Input Number"></input>
+    <button onclick="num2String()">Convert Number to String</button>
+    <div id="results2"></div>
+    <hr/>
+    <h3>See Data Type!</h3>
+    <div id="type-of-input"></div>
+    <input id="input-data" type="textarea" value="Num" placeholder="Input Data" onkeyup="checkDataType(this.value)"></input>
+    <hr/>
+    <h3>Add two numbers!</h3>
+    <div id="add-numbers"></div>
+    <input type="number" id="value1" name="value1" placeholder="First Number" value=""></input>
+    <input type="number" id="value2" name="value2" placeholder="Second Number" value=""></input>
+    <input type="button" name="Submit" value="Add" onclick="add()"></input>
+    <hr/>
+    <h3>True or False</h3>
+    <div id="true-false"></div>
+    <input type="text" id="valueX" name="value1" placeholder="Value X" value=""/>
+    <input type="text" id="valueY" name="value2" placeholder="Value Y" value=""/>
+    <br>
+    <input type="button" name="submit" value="Both True" onclick="ifBothTrue()"/>
+    <button onclick="ifOneTrue()">One is True</button>
+    <button onclick="neitherTrue()">Neither are true</button>
+
+    <hr/>
+    <script src="main.js"></script>
   </body>
 </html>
-<script src="main.js"></script>

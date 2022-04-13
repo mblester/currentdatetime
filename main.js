@@ -15,19 +15,20 @@ const displayDate = () => {
  
 
 // Write a JavaScript program to convert a number to a string.
-const convertNumbertoString = (str) => {
-  const result = Number(str)
- return result
+const num2String = (numInput) => {
+  numInput = document.getElementById("numInput").value 
+  document.getElementById("results2").innerHTML = `${numInput} is a ${typeof(numInput)}`;
 }
-console.log(convertNumbertoString("5"))
-
 
 // Write a JavaScript program to convert a string to the number.
-const convertStringtoNum = (num) => {
-  const result = String(num)
-  return result
+let stringInput = ""
+
+const str2num = (numA) => {
+  numA = document.getElementById("stringInput").value
+  x.parseInt(numA)
+  document.getElementById("results").innerHTML = `${x} is a ${typeof(x)}`;
+  console.log(typeof(x))
 }
-console.log(convertStringtoNum(10))
 
 
 // Write a JavaScript program that takes in different datatypes and prints out whether they are a:
@@ -38,8 +39,9 @@ console.log(convertStringtoNum(10))
   // * NaN
   // * String
   
-  function checkDataType(element) {
-    return typeof element
+const checkDataType = (inputData) => {
+    inputData = document.getElementById("input-data").value
+    document.getElementById("type-of-input").innerHTML = typeof inputData;
   }
 
   console.log(checkDataType(true))
@@ -48,23 +50,48 @@ console.log(convertStringtoNum(10))
 
   
 // Write a JavaScript program that adds 2 numbers together.
-let results = add();
-console.log("R", results);
-
-function add() {
-  return 3 + 4;
+const add = (a, b) => {
+  a = document.getElementById("value1").value
+  b = document.getElementById("value2").value
+  let sum = parseInt(a) + parseInt(b) ;
+  document.getElementById("add-numbers").innerHTML = sum ;
 }
-
 
 // Write a JavaScript program that runs only when 2 things are true.
 
-
+const ifBothTrue = () => {
+  let x = parseInt(document.getElementById("valueX").value);
+  let y = parseInt(document.getElementById("valueY").value);
+  if (x === y) {
+    document.getElementById("true-false").innerHTML = "True";
+  } else {
+    document.getElementById("true-false").innerHTML = "False";
+  }
+}
 
 // Write a JavaScript program that runs when 1 of 2 things are true.
 
+const ifOneTrue = () => {
+  let x = parseInt(document.getElementById("valueX").value);
+  let y = parseInt(document.getElementById("valueY").value);
+  if (x || y > 0) {
+    document.getElementById("true-false").innerHTML = "True";
+  } else {
+    document.getElementById("true-false").innerHTML = "False";
+  }
+}
 
 
 // Write a JavaScript program that runs when both things are not true.  
+const neitherTrue = () => {
+  let x = parseInt(document.getElementById("valueX").value);
+  let y = parseInt(document.getElementById("valueY").value);
+  if (x <= 0 && y <= 0) {
+    document.getElementById("true-false").innerHTML = "True";
+  } else {
+    document.getElementById("true-false").innerHTML = "False";
+  }
+}
 
 // ***************************
 //         PART TWO
@@ -78,11 +105,11 @@ function add() {
 // 6. go to `index.html` 
 // 7. create inputs, buttons and event listeners that render the code blocks you built above to the DOM.
 
-const numInput = document.getElementById("num2str")
-const result convertNumbertoString(num2str.value)
-
-num2str.value
-console.log(results)
+// const numInput = document.getElementById("num2str")
+// const results = num2String(num2str.value)
+// //const displayElement = document.getElementById("display-num2str").innerText = results
+// num2str.value
+//console.log(results)
 // Additional Resources
 // Video1: https://player.vimeo.com/video/377147232
 // Video2: https://www.youtube.com/embed/bkvH28PXLWc
